@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() 
+{
+  setlocale(LC_ALL,"Russian");
+  int lot1, long1, lot2, long2, kord1, kord2;
+  cout<<"Введите координаты: ";
+  cin>>lot1;
+  cout<<"Введите координаты: ";
+  cin>>long1;
+  cout<<"Введите координаты: ";
+  cin>>lot2;
+  cout<<"Введите координаты: ";
+  cin>>long2;
+  kord1 = abs(lot2 - lot1);
+  kord2 = abs(long2 - long1);
+  while (kord1 != kord2) 
+  if (kord1 == 0)
+{
+  return kord2 + 1;
+}
+  if (kord1 == 0) 
+{
+  return kord1 + 1;
+}
+{
+  if (kord1 > kord2) 
+{
+  long tmp = kord1;
+  kord1 = kord2;
+  kord2 = tmp;
+}
+  kord2 = kord2 - kord1;
+}
+  cout<<"Количество узлов: "<<kord1 + 1;
+  system("Pause");
+  return 0;
+}
