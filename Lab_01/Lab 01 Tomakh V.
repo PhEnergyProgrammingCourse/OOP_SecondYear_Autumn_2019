@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+	float a1, b1, a2, b2;
+	
+	cin >> a1 >> b1 >> a2 >> b2;
+
+
+	float PI = 3.14159;
+	float Length = 40000;
+	float R = Length / (2 * PI);
+
+	a1 = a1 * PI / 180;
+	b1 = b1 * PI / 180;
+	a2 = a2 * PI / 180;
+	b2 = b2 * PI / 180;
+
+	float l;
+
+	l = R * acosf(cosf(a1)*cosf(a2)*cosf(b1 - b2) + sinf(a1)*sinf(a2));
+	
+	cout << "Distance over the surface of a sphere: " << l;
+	return 0;
+}
