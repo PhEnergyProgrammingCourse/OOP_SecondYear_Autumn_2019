@@ -1,0 +1,31 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+ int main()
+ {
+  setlocale(LC_ALL,"Russian");
+/*
+* Расстояние между двумя точками
+* lot1, long1 - широта, долгота 1-й точки,
+* lot2, long2 - широта, долгота 2-й точки
+*/
+float lat1, lat2, long1, long2;
+cin >> lat1 >> lat2 >> long1 >> long2;
+   float PI = 3.14;
+     float Length = 40000;
+	float R = Length / (2 * PI);
+// перевести координаты в радианы
+lat1 = lat1 * PI / 180;
+lat2 = lat2 * PI / 180;
+long1 = long1 * PI / 180;
+long2 = long2 * PI / 180;
+ 
+ float l;
+ 
+// вычисления длины большого круга
+
+l = R * acosf(cosf(lat1)*cosf(long1)*cosf(lat2 - long2) + sinf(lat1)*sinf(long1));
+ cout << "Кратчайшее расстояние: " << l;
+return 0;
+}
