@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+struct Point
+{
+  float x;
+  float y;
+};
+
+int main()
+{
+   cout << "Add an triangle point:" <<  endl;
+  Point point1;
+  cin >> point1.x >> point1.y;
+  cout << "Add an triangle point:" <<  endl;
+  Point point2;
+   cin >> point2.x >> point2.y;
+   cout << "Add an triangle point:" <<  endl;
+  Point point3;
+  cin >> point3.x >> point3.y;
+
+   cout << "Add an point to check:" << endl;
+  Point point0;
+   cin >> point0.x >> point0.y;
+
+  float a = (point1.x - point0.x)* (point2.y - point1.y) - (point2.x - point1.x) * (point1.y - point0.y);
+  float b = (point2.x - point0.x)* (point3.y - point2.y) - (point3.x - point2.x) * (point2.y - point0.y);
+  float c = (point3.x - point0.x)* (point1.y - point3.y) - (point1.x - point3.x) * (point3.y - point0.y);
+
+  if (a == b && b == c) {  cout << 0 << endl; }
+  else if (a == 0 || b == 0 || c == 0) {  cout << 2 <<  endl; }
+  else { cout << 1 <<  endl; }
+  system("pause");
+  return 0;
+}
