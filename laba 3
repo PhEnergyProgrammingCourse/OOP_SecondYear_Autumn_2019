@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+ long int q1, a1, q2, a2;
+ cin >> q1 >> a1 >> q2 >>a2;
+ unsigned int answer = 0;
+ for (int i = ((q1 < q2) ? q1 : q2) + 1; i < ((q1 >q2) ? q1 : q2); i++)
+ {
+  long double cor = (i - q1)*(a2 - a1) / ((double)(q2 - q1)) + a1;
+  if (int(cor) == cor)
+   answer++;
+ }
+ cout << answer;
+ system("pause");
+ return 0;
+}
