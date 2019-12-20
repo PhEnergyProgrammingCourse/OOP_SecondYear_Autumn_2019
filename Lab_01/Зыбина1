@@ -1,0 +1,18 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+int main (){
+    double R,s1,s2,z1,z2,x1,x2,X,c;
+    cout<<"Введите значение широту и долготу одной точки:";
+  cin>>s1>>z1;
+  cout<<"Введите значение широту и долготу второй точки:";
+  cin>>s2>>z2;
+    R=40000/6.29;
+    x1=cos(s1)*cos(s2)*cos(z1-z2);
+    X=x1+x2; 
+    c=R*acos(X);
+    cout<<c<<endl; 
+system ("pause");
+return 0;
+    
+}

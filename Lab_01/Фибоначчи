@@ -1,0 +1,23 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    unsigned long long int a ,b, k;
+    a=0;
+    b=1;
+    cin >> k;
+    while (k<=0)
+    {
+        cin >> k;
+    }
+    while (k!=0)
+    {
+        a=a+b;
+        b=a-b;
+        k=k-1;
+        cout << a << " ";
+    }
+    return 0;
+}
